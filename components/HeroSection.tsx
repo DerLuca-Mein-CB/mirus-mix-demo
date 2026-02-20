@@ -117,7 +117,7 @@ export default function HeroSection() {
                         className="w-full h-full object-contain p-2"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
-                          target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmOWZmIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPvCfpoA8L3RleHQ+PC9zdmc+"
+                          target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmOWZmIi8+PHJlY3QgeD0iMjIiIHk9IjI4IiB3aWR0aD0iNTYiIGhlaWdodD0iNDQiIHJ4PSI0IiBzdHJva2U9IiM3ZGQzZmMiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0iI2UwZjJmZSIvPjxjaXJjbGUgY3g9IjM2IiBjeT0iNDIiIHI9IjciIGZpbGw9IiM3ZGQzZmMiLz48cGF0aCBkPSJNMjIgNjIgTDQwIDQ4IEw1MiA1NiBMNjQgNDQgTDc4IDYyIFoiIGZpbGw9IiNiYWU2ZmQiLz48L3N2Zz4="
                         }}
                       />
                     </div>
