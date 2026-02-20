@@ -33,9 +33,6 @@ export default function Header() {
                 target.style.display = 'none'
               }}
             />
-            <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-primary-700 to-dental-green bg-clip-text text-transparent">
-              {shopInfo.name}
-            </span>
           </Link>
 
           {/* Desktop Nav */}
