@@ -1,3 +1,4 @@
+import { User } from 'lucide-react'
 import { testimonials } from '@/lib/data'
 
 export default function TestimonialsSection() {
@@ -44,8 +45,8 @@ export default function TestimonialsSection() {
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-100 to-dental-green-light flex items-center justify-center text-xl">
-                  {testimonial.avatar}
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-100 to-dental-green-light flex items-center justify-center">
+                  <User className="w-5 h-5 text-primary-600" />
                 </div>
                 <div>
                   <div className="font-semibold text-slate-800 text-sm">

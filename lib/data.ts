@@ -37,28 +37,28 @@ export const categories: Category[] = [
     name: 'Kinderzugabeartikel',
     slug: 'kinderzugabeartikel',
     description: 'Tolle Überraschungen für kleine Patienten – Ringe, Springbälle, Dinosaurier und mehr',
-    icon: '🎁',
+    icon: 'gift',
     color: 'from-pink-400 to-purple-500',
   },
   {
     name: 'Praxis- & Prophylaxebedarf',
     slug: 'praxis-prophylaxebedarf',
     description: 'Professionelle Hilfsmittel für Ihre Zahnarztpraxis – Sanduhr, Zahnspiegel, Behälter',
-    icon: '🦷',
+    icon: 'stethoscope',
     color: 'from-sky-400 to-blue-500',
   },
   {
     name: 'Karten',
     slug: 'karten',
     description: 'Recall-Postkarten und Einladungskarten für Ihre Patienten',
-    icon: '📬',
+    icon: 'mail',
     color: 'from-emerald-400 to-teal-500',
   },
   {
     name: 'Bestseller',
     slug: 'bestseller',
     description: 'Unsere beliebtesten Produkte – von Zahnärzten am häufigsten bestellt',
-    icon: '⭐',
+    icon: 'star',
     color: 'from-amber-400 to-orange-500',
   },
 ]
@@ -345,7 +345,7 @@ export const testimonials = [
     practice: 'Zahnarztpraxis Hoffmann, München',
     rating: 5,
     text: 'Wir bestellen seit über 5 Jahren bei Mirus Mix und sind absolut begeistert. Die Kinder freuen sich immer riesig über die Zugabeartikel nach der Behandlung. Qualität und Service sind top!',
-    avatar: '👩‍⚕️',
+    avatar: 'user',
   },
   {
     id: 2,
@@ -353,7 +353,7 @@ export const testimonials = [
     practice: 'Gemeinschaftspraxis am Marktplatz, Hamburg',
     rating: 5,
     text: 'Die Sanduhren und Zahnspiegel sind bei unseren kleinen Patienten sehr beliebt. Die Preise sind fair und die Lieferung kommt immer pünktlich. Klare Weiterempfehlung!',
-    avatar: '👨‍⚕️',
+    avatar: 'user',
   },
   {
     id: 3,
@@ -361,28 +361,28 @@ export const testimonials = [
     practice: 'Kieferorthopädie Dr. Klein, Frankfurt',
     rating: 5,
     text: 'Der Schatzkammer-Mix ist unser absoluter Favorit! Die Kinder können sich selbst etwas aussuchen – das macht den Zahnarztbesuch gleich viel weniger beängstigend. Super Produkt!',
-    avatar: '👩‍💼',
+    avatar: 'user',
   },
 ]
 
 export const benefits = [
   {
-    icon: '🎁',
+    icon: 'gift',
     title: 'Riesige Auswahl',
     description: 'Über 200 verschiedene Kinderzugabeartikel und Prophylaxebedarf für Ihre Zahnarztpraxis',
   },
   {
-    icon: '💰',
+    icon: 'tag',
     title: 'Faire Preise',
     description: 'Günstige Stückpreise ab 0,14 € – attraktive Mengenrabatte für regelmäßige Bestellungen',
   },
   {
-    icon: '🚀',
+    icon: 'zap',
     title: 'Schnelle Lieferung',
     description: 'Versand innerhalb von 1–2 Werktagen direkt in Ihre Praxis – zuverlässig und pünktlich',
   },
   {
-    icon: '🤝',
+    icon: 'handshake',
     title: 'Persönlicher Service',
     description: 'Kompetente Beratung durch Fachpersonal – wir helfen Ihnen bei der Auswahl der richtigen Artikel',
   },

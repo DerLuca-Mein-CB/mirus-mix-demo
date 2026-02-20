@@ -6,8 +6,16 @@ import BenefitsSection from '@/components/BenefitsSection'
 import ProductCard from '@/components/ProductCard'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { products, categories } from '@/lib/data'
+import { Star, Gift, Stethoscope, Mail, Phone, type LucideIcon } from 'lucide-react'
 
 const bestsellers = products.filter((p) => p.isBestseller).slice(0, 8)
+
+const categoryIconMap: Record<string, LucideIcon> = {
+  gift: Gift,
+  stethoscope: Stethoscope,
+  mail: Mail,
+  star: Star,
+}
 
 export default function HomePage() {
   return (
@@ -23,8 +31,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
             <div>
-              <span className="inline-block bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
-                ⭐ Bestseller
+              <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
+                <Star className="w-3.5 h-3.5 fill-current" /> Bestseller
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
                 Unsere beliebtesten Produkte
@@ -69,28 +77,33 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((cat) => (
-              <Link
-                key={cat.slug}
-                href={`/products?category=${cat.slug}`}
-                className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div
-                  className={`bg-gradient-to-br ${cat.color} p-8 h-full min-h-[180px] flex flex-col justify-between`}
+            {categories.map((cat) => {
+              const Icon = categoryIconMap[cat.icon] ?? Gift
+              return (
+                <Link
+                  key={cat.slug}
+                  href={`/products?category=${cat.slug}`}
+                  className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="text-5xl mb-4">{cat.icon}</div>
-                  <div>
-                    <h3 className="text-white font-bold text-lg leading-tight mb-1">
-                      {cat.name}
-                    </h3>
-                    <p className="text-white/80 text-sm line-clamp-2">
-                      {cat.description}
-                    </p>
+                  <div
+                    className={`bg-gradient-to-br ${cat.color} p-8 h-full min-h-[180px] flex flex-col justify-between`}
+                  >
+                    <div className="mb-4">
+                      <Icon className="w-12 h-12 text-white/90" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-bold text-lg leading-tight mb-1">
+                        {cat.name}
+                      </h3>
+                      <p className="text-white/80 text-sm line-clamp-2">
+                        {cat.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors" />
-              </Link>
-            ))}
+                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors" />
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -117,9 +130,9 @@ export default function HomePage() {
             </Link>
             <a
               href="tel:+4906203-64668"
-              className="bg-white/10 text-white border border-white/30 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all"
+              className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/30 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all"
             >
-              📞 Anrufen
+              <Phone className="w-4 h-4" /> Anrufen
             </a>
           </div>
         </div>

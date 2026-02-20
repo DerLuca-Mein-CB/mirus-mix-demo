@@ -5,6 +5,7 @@ import { Product, products } from '@/lib/data'
 import AddToCartSection from '@/components/AddToCartSection'
 import ProductCard from '@/components/ProductCard'
 import { useState } from 'react'
+import { Star, ImageOff, Zap, CheckCircle, Phone } from 'lucide-react'
 
 interface Props {
   productId: string
@@ -18,7 +19,9 @@ export default function ProductDetailClient({ productId }: Props) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center">
-          <p className="text-6xl mb-4">🦷</p>
+          <div className="flex justify-center mb-4">
+            <ImageOff className="w-16 h-16 text-slate-300" />
+          </div>
           <h1 className="text-2xl font-bold text-slate-800 mb-2">Produkt nicht gefunden</h1>
           <Link href="/products" className="text-primary-600 hover:underline font-medium">
             ← Zurück zur Übersicht
@@ -51,7 +54,9 @@ export default function ProductDetailClient({ productId }: Props) {
           {/* Image */}
           <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-3xl p-8 flex items-center justify-center aspect-square relative">
             {imgError ? (
-              <div className="text-9xl">🦷</div>
+              <div className="flex flex-col items-center justify-center gap-3 text-slate-300">
+                <ImageOff className="w-20 h-20" />
+              </div>
             ) : (
               <img
                 src={product.image}
@@ -62,7 +67,9 @@ export default function ProductDetailClient({ productId }: Props) {
             )}
             <div className="absolute top-4 left-4 flex flex-col gap-2">
               {product.isBestseller && (
-                <span className="bg-amber-400 text-amber-900 text-sm font-bold px-3 py-1 rounded-full">⭐ Bestseller</span>
+                <span className="inline-flex items-center gap-1 bg-amber-400 text-amber-900 text-sm font-bold px-3 py-1 rounded-full">
+                  <Star className="w-3.5 h-3.5 fill-current" /> Bestseller
+                </span>
               )}
               {product.isNew && (
                 <span className="bg-dental-green text-white text-sm font-bold px-3 py-1 rounded-full">Neu</span>
@@ -96,16 +103,16 @@ export default function ProductDetailClient({ productId }: Props) {
             <AddToCartSection product={product} />
 
             <div className="grid grid-cols-3 gap-4 mt-8">
-              <div className="text-center p-3 bg-sky-50 rounded-xl">
-                <p className="text-2xl mb-1">🚀</p>
+              <div className="text-center p-3 bg-sky-50 rounded-xl flex flex-col items-center gap-1">
+                <Zap className="w-6 h-6 text-sky-500" />
                 <p className="text-xs text-slate-600 font-medium">1-2 Werktage</p>
               </div>
-              <div className="text-center p-3 bg-emerald-50 rounded-xl">
-                <p className="text-2xl mb-1">✅</p>
+              <div className="text-center p-3 bg-emerald-50 rounded-xl flex flex-col items-center gap-1">
+                <CheckCircle className="w-6 h-6 text-emerald-500" />
                 <p className="text-xs text-slate-600 font-medium">Auf Lager</p>
               </div>
-              <div className="text-center p-3 bg-amber-50 rounded-xl">
-                <p className="text-2xl mb-1">📞</p>
+              <div className="text-center p-3 bg-amber-50 rounded-xl flex flex-col items-center gap-1">
+                <Phone className="w-6 h-6 text-amber-500" />
                 <p className="text-xs text-slate-600 font-medium">Beratung</p>
               </div>
             </div>

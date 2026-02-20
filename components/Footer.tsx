@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { shopInfo } from '@/lib/data'
+import { Lock, Truck } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -119,11 +120,11 @@ export default function Footer() {
         <div className="border-t border-slate-800 mt-10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
           <p>© 2024 {shopInfo.name}. Alle Rechte vorbehalten.</p>
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1">
-              <span>🔒</span> Sichere Zahlung
+            <span className="flex items-center gap-1.5">
+              <Lock className="w-4 h-4" /> Sichere Zahlung
             </span>
-            <span className="flex items-center gap-1">
-              <span>🚚</span> Schnelle Lieferung
+            <span className="flex items-center gap-1.5">
+              <Truck className="w-4 h-4" /> Schnelle Lieferung
             </span>
           </div>
         </div>

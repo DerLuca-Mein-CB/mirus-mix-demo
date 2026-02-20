@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Product } from '@/lib/data'
 import { useCart } from '@/lib/CartContext'
 import { useState } from 'react'
+import { Star, ImageOff, Check } from 'lucide-react'
 
 interface ProductCardProps {
   product: Product
@@ -12,6 +13,7 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCart()
   const [added, setAdded] = useState(false)
+  const [imgError, setImgError] = useState(false)
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -24,18 +26,25 @@ export default function ProductCard({ product }: ProductCardProps) {
     <Link href={`/products/${product.id}`} className="group block">
       <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-slate-100 hover:border-primary-200 h-full flex flex-col">
         {/* Image */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-sky-50 to-blue-50 aspect-square">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-          />
+        <div className="relative overflow-hidden bg-gradient-to-br from-sky-50 to-blue-50 aspect-square flex items-center justify-center">
+          {imgError ? (
+            <div className="flex flex-col items-center justify-center gap-2 text-slate-300">
+              <ImageOff className="w-12 h-12" />
+            </div>
+          ) : (
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              onError={() => setImgError(true)}
+            />
+          )}
           {/* Badges */}
           <div className="absolute top-2 left-2 flex flex-col gap-1">
             {product.isBestseller && (
-              <span className="bg-amber-400 text-amber-900 text-xs font-bold px-2 py-0.5 rounded-full">
-                ⭐ Bestseller
+              <span className="inline-flex items-center gap-1 bg-amber-400 text-amber-900 text-xs font-bold px-2 py-0.5 rounded-full">
+                <Star className="w-3 h-3 fill-current" /> Bestseller
               </span>
             )}
             {product.isNew && (
@@ -64,13 +73,19 @@ export default function ProductCard({ product }: ProductCardProps) {
 
             <button
               onClick={handleAddToCart}
-              className={`w-full py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 ${
+              className={`w-full py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
                 added
                   ? 'bg-dental-green text-white scale-95'
                   : 'bg-primary-600 hover:bg-primary-700 text-white hover:shadow-md active:scale-95'
               }`}
             >
-              {added ? '✓ Hinzugefügt' : 'In den Warenkorb'}
+              {added ? (
+                <>
+                  <Check className="w-4 h-4" /> Hinzugefügt
+                </>
+              ) : (
+                'In den Warenkorb'
+              )}
             </button>
           </div>
         </div>

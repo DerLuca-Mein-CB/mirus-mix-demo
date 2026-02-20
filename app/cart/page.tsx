@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useCart } from '@/lib/CartContext'
 import { useState } from 'react'
+import { ShoppingCart, ImageOff, Lock, Zap, Phone, RotateCcw, ArrowRight } from 'lucide-react'
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, clearCart, totalPrice } = useCart()
@@ -12,7 +13,9 @@ export default function CartPage() {
     return (
       <div className="min-h-[60vh] flex items-center justify-center bg-slate-50">
         <div className="text-center">
-          <p className="text-8xl mb-6">🛒</p>
+          <div className="flex justify-center mb-6">
+            <ShoppingCart className="w-20 h-20 text-slate-300" />
+          </div>
           <h1 className="text-3xl font-bold text-slate-800 mb-3">Ihr Warenkorb ist leer</h1>
           <p className="text-slate-500 mb-8 max-w-md mx-auto">
             Entdecken Sie unsere tolle Auswahl an Kinderzugabeartikeln und Praxisbedarf.
@@ -21,7 +24,7 @@ export default function CartPage() {
             href="/products"
             className="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-700 transition-all hover:shadow-lg"
           >
-            Jetzt stöbern →
+            Jetzt stöbern <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
@@ -54,7 +57,7 @@ export default function CartPage() {
               >
                 <div className="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-sky-50 rounded-xl overflow-hidden flex items-center justify-center">
                   {imgErrors[item.product.id] ? (
-                    <span className="text-4xl">🦷</span>
+                    <ImageOff className="w-8 h-8 text-slate-300" />
                   ) : (
                     <img
                       src={item.product.image}
@@ -148,10 +151,18 @@ export default function CartPage() {
 
               <div className="mt-6 pt-6 border-t">
                 <div className="grid grid-cols-2 gap-3 text-center text-xs text-slate-500">
-                  <div className="p-2 bg-slate-50 rounded-lg">🔒 Sicherer Kauf</div>
-                  <div className="p-2 bg-slate-50 rounded-lg">🚀 1-2 Werktage</div>
-                  <div className="p-2 bg-slate-50 rounded-lg">📞 Persönliche Beratung</div>
-                  <div className="p-2 bg-slate-50 rounded-lg">↩️ Einfache Retoure</div>
+                  <div className="p-2 bg-slate-50 rounded-lg flex flex-col items-center gap-1">
+                    <Lock className="w-4 h-4" /> Sicherer Kauf
+                  </div>
+                  <div className="p-2 bg-slate-50 rounded-lg flex flex-col items-center gap-1">
+                    <Zap className="w-4 h-4" /> 1-2 Werktage
+                  </div>
+                  <div className="p-2 bg-slate-50 rounded-lg flex flex-col items-center gap-1">
+                    <Phone className="w-4 h-4" /> Persönliche Beratung
+                  </div>
+                  <div className="p-2 bg-slate-50 rounded-lg flex flex-col items-center gap-1">
+                    <RotateCcw className="w-4 h-4" /> Einfache Retoure
+                  </div>
                 </div>
               </div>
             </div>

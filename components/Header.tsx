@@ -5,6 +5,7 @@ import { useCart } from '@/lib/CartContext'
 import { shopInfo } from '@/lib/data'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { Phone } from 'lucide-react'
 
 export default function Header() {
   const { totalItems } = useCart()
@@ -121,9 +122,10 @@ export default function Header() {
               ))}
               <a
                 href={`tel:${shopInfo.phone}`}
-                className="px-4 py-3 text-sm text-slate-600"
+                className="px-4 py-3 flex items-center gap-2 text-sm text-slate-600"
               >
-                📞 {shopInfo.phone}
+                <Phone className="w-4 h-4" />
+                {shopInfo.phone}
               </a>
             </nav>
           </div>

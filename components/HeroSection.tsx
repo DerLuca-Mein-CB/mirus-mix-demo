@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { shopInfo } from '@/lib/data'
+import { Star } from 'lucide-react'
 
 export default function HeroSection() {
   return (
@@ -55,7 +56,7 @@ export default function HeroSection() {
                 href="/products?category=bestseller"
                 className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/30 px-6 py-3.5 rounded-xl font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
               >
-                ⭐ Bestseller
+                <Star className="w-4 h-4 fill-current" /> Bestseller
               </Link>
             </div>
 
@@ -127,8 +128,9 @@ export default function HeroSection() {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dental-green text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg whitespace-nowrap">
-                ✓ Schnelle Lieferung in 1–2 Werktagen
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dental-green text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg whitespace-nowrap flex items-center gap-1.5">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                Schnelle Lieferung in 1–2 Werktagen
               </div>
             </div>
           </div>

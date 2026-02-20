@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useCart } from '@/lib/CartContext'
 import { Product } from '@/lib/data'
 import Link from 'next/link'
+import { ShoppingCart, Check } from 'lucide-react'
 
 export default function AddToCartSection({ product }: { product: Product }) {
   const { addItem } = useCart()
@@ -45,13 +46,17 @@ export default function AddToCartSection({ product }: { product: Product }) {
       {/* Add to cart */}
       <button
         onClick={handleAdd}
-        className={`w-full py-4 px-6 rounded-xl font-semibold text-base transition-all duration-200 ${
+        className={`w-full py-4 px-6 rounded-xl font-semibold text-base transition-all duration-200 flex items-center justify-center gap-2 ${
           added
             ? 'bg-dental-green text-white scale-[0.98]'
             : 'bg-primary-600 hover:bg-primary-700 text-white hover:shadow-lg active:scale-[0.98]'
         }`}
       >
-        {added ? '✓ In den Warenkorb gelegt!' : '🛒 In den Warenkorb'}
+        {added ? (
+        <><Check className="w-5 h-5" /> In den Warenkorb gelegt!</>
+      ) : (
+        <><ShoppingCart className="w-5 h-5" /> In den Warenkorb</>
+      )}
       </button>
 
       {added && (
