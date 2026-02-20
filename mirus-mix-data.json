@@ -1,0 +1,48 @@
+{
+  "shop": {
+    "name": "Mirus Mix",
+    "owner": "Martin Magnberg",
+    "phone": "+49 (0)6203-64668",
+    "description": "Zahnarzt-Praxisbedarf: Kinderzugabeartikel, Prophylaxebedarf, Recall-Karten und mehr",
+    "logo": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/MediaGallery/design_2017/header/logo_mirus_mix_green_blue_transparent_small.png"
+  },
+  "categories": [
+    {"name": "Kinderzugabeartikel", "slug": "kinderzugabeartikel", "subcategories": [
+      "Alle Artikel", "Neuheiten", "Themen & Trends", "Bälle & Springbälle", "Fahrzeuge/Flieger", "Puzzles", "Sticker/Tattoos", "Schmuck/Ringe", "Tiere/Plüsch"
+    ]},
+    {"name": "Praxis- & Prophylaxebedarf", "slug": "praxis-prophylaxebedarf", "subcategories": [
+      "Zahnbürsten", "Zahnseide", "Behälter", "Demo-Puppen", "Sanduhr/Spiegel", "Tüten/Tragetaschen/Säckchen"
+    ]},
+    {"name": "Karten", "slug": "karten", "subcategories": ["Recall Postkarten", "Recall Karten"]},
+    {"name": "Bestseller", "slug": "bestseller"},
+    {"name": "Events", "slug": "events"}
+  ],
+  "themes": ["Smiley World", "Weltraum", "Dino", "Zahnindianer", "Meerjungfrau", "Einhorn", "Flamingo", "Prinzessin", "Pirat"],
+  "bestseller_products": [
+    {"id": "116", "name": "Ringe mit kleinen Kristallen, 72 Stück", "price": 24.90, "unit_price": 0.35, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8C/FD5C/1DA2/C354/2F59/C0A8/29BA/0994/Ring_med_rulle_m.jpg"},
+    {"id": "124", "name": "Radierer Bleistiftstecker Smilies, 72 Stück", "price": 22.90, "unit_price": 0.32, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8D/011F/5C1F/D004/DF54/C0A8/29B9/827E/Bleistiftstecker_Smilies_m.jpg"},
+    {"id": "200", "name": "Sanduhr, 40 Stück", "price": 26.90, "unit_price": 0.67, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8D/0470/4FA7/82CE/64A2/C0A8/29B9/6669/200_Sanduhr_m.jpg"},
+    {"id": "202", "name": "Sanduhr Smile-Top 2 Farben Mix, 40 Stück", "price": 28.90, "unit_price": 0.72, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4D32/AAB1/46C7/7833/5FCB/C0A8/29B9/FE2C/202_Sanduhr_Smilie_top_1_m.jpg"},
+    {"id": "231", "name": "Zahnspiegel, 60 Stück", "price": 22.90, "unit_price": 0.38, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8E/11EC/E3E4/7F40/0A29/C0A8/29B9/6B0A/231_Zahnspiegel_1_m.jpg"},
+    {"id": "239", "name": "Stempel Zahn, 60 Stück", "price": 22.90, "unit_price": 0.38, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8E/1B29/C965/A717/AF5D/C0A8/29B9/68DE/239_Stempel_Zahn_m.jpg"},
+    {"id": "249", "name": "Steck-Buntstifte, 50 Stück", "price": 26.90, "unit_price": 0.54, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8E/1D7B/C44B/2090/D381/C0A8/29BA/DD5E/Steck-Buntstifte_m.jpg"},
+    {"id": "252", "name": "Glitzertiere, 96 Stück", "price": 26.90, "unit_price": 0.28, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8E/1DCD/6E17/2EF2/3F9D/C0A8/29B9/77FE/Glitzertiere_m.jpg"},
+    {"id": "254", "name": "Dinosaurier, 144 Stück", "price": 29.90, "unit_price": 0.21, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8E/1E00/6464/41BA/2B2F/C0A8/29B9/8840/254_Dinosaurier_m.jpg"},
+    {"id": "264", "name": "Zahnbehälter Happy Smile, 36 Stück", "price": 19.90, "unit_price": 0.55, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4C8E/1E8E/1682/D7BE/502D/C0A8/29BA/ED8C/Zahnbehaelter_Happy_Smile_m.jpg"},
+    {"id": "299", "name": "Springbälle Smile (30mm), 100 Stück", "price": 24.90, "unit_price": 0.25, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/57D6/6638/B930/5058/EAF9/C0A8/2BBC/98D4/Smilie_Flumies_m.jpg"},
+    {"id": "325", "name": "Mini-Zahnbehälter, 72 Stück", "price": 22.90, "unit_price": 0.32, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4FE1/8280/7504/337D/87EB/C0A8/2981/C36E/325_Mini_Zahnbehaelter_m.png"},
+    {"id": "360", "name": "Schatzkammer Mix, 150 Stück", "price": 46.90, "unit_price": 0.31, "image": "https://www.mirus-mix.de/WebRoot/Store12/Shops/62584053/4DFA/1204/2400/F8BB/42D3/C0A8/29BA/F163/Schatzkammermix_150_Stueck_m.jpg"},
+    {"id": "527", "name": "Tattoos Boys, 144 Stück", "price": 19.90, "unit_price": 0.14},
+    {"id": "528", "name": "Tattoos Girls, 144 Stück", "price": 19.90, "unit_price": 0.14},
+    {"id": "402", "name": "Antistress Zahn, 24 Stück", "price": 24.90, "unit_price": 1.04},
+    {"id": "285", "name": "Radierer Milchzähne, 72 Stück", "price": 24.90, "unit_price": 0.35},
+    {"id": "585", "name": "Schlüsselanhänger Reflektor Zahn, 24 Stück", "price": 19.90, "unit_price": 0.83},
+    {"id": "960", "name": "Springbälle Happy Zahn (33mm), 50 Stück", "price": 24.90, "unit_price": 0.52}
+  ],
+  "design_reference": {
+    "site": "pferde-gold.de",
+    "style": "Modern e-commerce, clean product cards with images, prices with discounts, customer reviews, category navigation, hero section, benefits section, magazine/blog section, WhatsApp support widget",
+    "colors": "Warm gold/amber tones, dark backgrounds, clean white cards",
+    "features": ["Product cards with discount badges", "Customer testimonials", "Category filter", "Abo/subscription option", "WhatsApp support", "Magazine/Blog section", "Responsive mobile-first"]
+  }
+}
